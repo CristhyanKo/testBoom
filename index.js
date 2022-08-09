@@ -9,6 +9,7 @@ app.use(express.json());
 
 
 app.post('/testJira', (req, res) => {
+  console.log(req.body)
   res.send(req.body);
 })
 
