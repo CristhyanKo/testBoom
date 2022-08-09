@@ -2,8 +2,14 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
+var bodyParser = require('body-parser');
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+
+
 app.post('/testJira', (req, res) => {
-  res.json(req.body);
+  res.send(req.body);
 })
 
 app.listen(port, () => {
