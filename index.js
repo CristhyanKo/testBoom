@@ -8,7 +8,7 @@ app.use(express.json());
 
 
 
-app.post('/testJira', (req, res) => {
+app.post('/webook/epico', (req, res) => {
   console.log(req.body)
   res.send(req.body);
 })
